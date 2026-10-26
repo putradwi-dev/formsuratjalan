@@ -6,7 +6,7 @@
     <title>Admin Surat Jalan - PT. MBP</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- html2pdf.js CDN (Tautan sudah diperbaiki) -->
+    <!-- html2pdf.js CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
@@ -112,16 +112,17 @@
 
         <!-- KOLOM KANAN: PRATINJAU (PREVIEW SURAT JALAN) -->
         <div class="lg:col-span-7 flex justify-center">
-            <div id="surat-jalan-container" class="bg-white w-[210mm] min-h-[297mm] p-8 shadow-xl rounded-lg border border-slate-300 flex flex-col justify-between text-black">
+            <!-- Padding dikurangi dari p-8 ke p-6 agar pas di 1 halaman A4 -->
+            <div id="surat-jalan-container" class="bg-white w-[210mm] min-h-[297mm] p-6 shadow-xl rounded-lg border border-slate-300 flex flex-col justify-between text-black">
                 
                 <!-- Bagian Atas: Header & Judul -->
                 <div>
                     <table class="w-full border-collapse border border-black mb-0">
                         <tr>
                             <!-- Logo & Info Perusahaan -->
-                            <td class="w-1/2 border border-black p-4 text-center align-middle">
+                            <td class="w-1/2 border border-black p-3 text-center align-middle">
                                 <div class="flex flex-col items-center justify-center">
-                                    <img src="Picture1.png" alt="Logo PT. MBP" class="h-12 object-contain mb-1.5">
+                                    <img src="Picture1.png" alt="Logo PT. MBP" class="h-12 object-contain mb-1">
                                     <div class="text-[9.55px] text-slate-800 leading-tight text-center">
                                         Ruko permata Medang Blok I-10,<br>
                                         Kel. Medang, Kec. Pagedangan,<br>
@@ -130,7 +131,7 @@
                                 </div>
                             </td>
                             <!-- Judul Surat Jalan -->
-                            <td class="w-1/2 border border-black p-4 text-center align-middle bg-white">
+                            <td class="w-1/2 border border-black p-3 text-center align-middle bg-white">
                                 <h2 class="text-2xl font-black underline tracking-wide">SURAT JALAN</h2>
                             </td>
                         </tr>
@@ -140,7 +141,7 @@
                     <table class="w-full border-collapse border border-black border-t-0">
                         <tr>
                             <!-- Alamat Tujuan -->
-                            <td class="w-1/2 border border-black p-3 align-top text-sm h-32">
+                            <td class="w-1/2 border border-black p-2.5 align-top text-sm h-28">
                                 <span class="font-bold block mb-1 text-xs">ALAMAT TUJUAN :</span>
                                 <div id="prevAlamat" class="whitespace-pre-line font-medium text-base"></div>
                             </td>
@@ -148,21 +149,21 @@
                             <td class="w-1/2 border border-black p-0 align-top">
                                 <table class="w-full h-full border-collapse">
                                     <tr class="border-b border-black">
-                                        <td class="w-1/2 border-r border-black p-3 align-top text-sm">
+                                        <td class="w-1/2 border-r border-black p-2.5 align-top text-sm">
                                             <span class="font-bold block text-xs text-slate-600">TANGGAL</span>
                                             <span id="prevTanggal" class="font-bold text-base">27/10/2026</span>
                                         </td>
-                                        <td class="w-1/2 p-3 align-top text-sm">
+                                        <td class="w-1/2 p-2.5 align-top text-sm">
                                             <span class="font-bold block text-xs text-slate-600">NOMOR PESANAN</span>
                                             <span id="prevNoPesanan" class="font-bold text-sm">261026MJ0K7D6G</span>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="w-1/2 border-r border-black p-3 align-top text-sm">
+                                        <td class="w-1/2 border-r border-black p-2.5 align-top text-sm">
                                             <span class="font-bold block text-xs text-slate-600">EKSPEDISI</span>
                                             <span id="prevEkspedisi" class="font-bold text-base">JNE REGULER</span>
                                         </td>
-                                        <td class="w-1/2 p-3 align-top text-sm">
+                                        <td class="w-1/2 p-2.5 align-top text-sm">
                                             <span class="font-bold block text-xs text-slate-600">TOKO</span>
                                             <span id="prevToko" class="font-bold text-base">SHOPE MT</span>
                                         </td>
@@ -173,7 +174,7 @@
                     </table>
 
                     <!-- Spacer tipis pembatas -->
-                    <div class="h-6"></div>
+                    <div class="h-4"></div>
 
                     <!-- Tabel Item Barang -->
                     <table class="w-full border-collapse border border-black">
@@ -192,25 +193,25 @@
                 </div>
 
                 <!-- Bagian Bawah: Tanda Tangan -->
-                <div class="mt-8">
+                <div class="mt-4">
                     <table class="w-full border-collapse border border-black">
                         <tr>
                             <!-- Hormat Kami -->
-                            <td class="w-1/2 border border-black p-3 align-top text-center h-36 relative">
+                            <td class="w-1/2 border border-black p-2.5 align-top text-center h-32 relative">
                                 <div class="text-sm font-semibold text-slate-800 mb-1">Hormat Kami,</div>
                                 <!-- Stempel & Tanda Tangan Asli -->
-                                <div class="absolute inset-x-0 top-10 flex justify-center items-center pointer-events-none">
-                                    <img src="Picture2.jpg" alt="Stempel & TTD" class="h-16 object-contain">
+                                <div class="absolute inset-x-0 top-8 flex justify-center items-center pointer-events-none">
+                                    <img src="Picture2.jpg" alt="Stempel & TTD" class="h-14 object-contain">
                                 </div>
-                                <div class="absolute bottom-3 inset-x-0 flex justify-center items-center gap-4 text-sm pl-6">
+                                <div class="absolute bottom-2.5 inset-x-0 flex justify-center items-center gap-4 text-sm pl-6">
                                     <div class="border-b border-black w-36 pb-1"></div>
                                     <span class="font-semibold">Tgl.</span>
                                 </div>
                             </td>
                             <!-- Penerima -->
-                            <td class="w-1/2 border border-black p-3 align-top text-center h-36 relative">
+                            <td class="w-1/2 border border-black p-2.5 align-top text-center h-32 relative">
                                 <div class="text-sm font-semibold text-slate-800 mb-1">Penerima,</div>
-                                <div class="absolute bottom-3 inset-x-0 flex justify-center items-center gap-4 text-sm pl-6">
+                                <div class="absolute bottom-2.5 inset-x-0 flex justify-center items-center gap-4 text-sm pl-6">
                                     <div class="border-b border-black w-36 pb-1"></div>
                                     <span class="font-semibold">Tgl.</span>
                                 </div>
@@ -256,7 +257,6 @@
             prevEkspedisi.textContent = inputEkspedisi.value;
             prevToko.textContent = inputToko.value;
 
-            // Render Tabel Barang (Minimal 5 baris, maksimal hingga 10 baris)
             const rows = itemInputsContainer.querySelectorAll('.item-input-row');
             let htmlContent = '';
             
@@ -269,7 +269,7 @@
                 if(nama || qty || packing) {
                     filledCount++;
                     htmlContent += `
-                        <tr class="h-10">
+                        <tr class="h-9">
                             <td class="border border-black px-2 py-1 text-center align-middle">${nama}</td>
                             <td class="border border-black px-2 py-1 text-center align-middle">${qty}</td>
                             <td class="border border-black px-2 py-1 text-center align-middle">${packing}</td>
@@ -281,11 +281,10 @@
                 }
             });
 
-            // Tambahkan baris kosong sisa hingga minimal 5 baris agar kotak tetap rapi
             const totalRowToShow = Math.max(5, filledCount);
             for(let i = filledCount; i < totalRowToShow; i++) {
                 htmlContent += `
-                    <tr class="h-10">
+                    <tr class="h-9">
                         <td class="border border-black px-2 py-1 text-center align-middle">&nbsp;</td>
                         <td class="border border-black px-2 py-1 text-center align-middle">&nbsp;</td>
                         <td class="border border-black px-2 py-1 text-center align-middle">&nbsp;</td>
@@ -347,40 +346,46 @@
             });
         }
 
-        // Fungsi Download PDF Langsung
+        // Fungsi Download PDF dengan Margin Optimal
         function downloadPDF() {
             const element = document.getElementById('surat-jalan-container');
             const noPesanan = inputNoPesanan.value || 'SuratJalan';
             const opt = {
-                margin:       5,
+                margin:       2,
                 filename:     `SuratJalan_${noPesanan}.pdf`,
                 image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  { scale: 2, useCORS: true },
+                html2canvas:  { scale: 2, useCORS: true, allowTaint: true },
                 jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
             };
-            html2pdf().from(element).set(opt).save();
+            html2pdf().from(element).set(opt).save().catch(err => {
+                alert("Gagal mengunduh PDF: " + err);
+            });
         }
 
-        // Fungsi Download Gambar Langsung
+        // Fungsi Download Gambar
         function downloadImage() {
             const element = document.getElementById('surat-jalan-container');
             const noPesanan = inputNoPesanan.value || 'SuratJalan';
             const opt = {
-                margin:       5,
+                margin:       2,
                 filename:     `SuratJalan_${noPesanan}.png`,
                 image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  { scale: 2, useCORS: true },
+                html2canvas:  { scale: 2, useCORS: true, allowTaint: true },
                 jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
             };
             
             html2pdf().from(element).set(opt).outputPdf('datauristring').then(function(pdfDataUri) {
-                html2canvas(element, { scale: 2, useCORS: true }).then(canvas => {
+                html2canvas(element, { scale: 2, useCORS: true, allowTaint: true }).then(canvas => {
                     const imageURL = canvas.toDataURL('image/png');
                     const link = document.createElement('a');
                     link.href = imageURL;
                     link.download = `SuratJalan_${noPesanan}.png`;
                     link.click();
+                }).catch(err => {
+                    alert("Gagal merender gambar canvas: " + err);
                 });
+            }).catch(err => {
+                alert("Gagal mengunduh Gambar: " + err);
             });
         }
 
