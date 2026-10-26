@@ -112,7 +112,6 @@
 
         <!-- KOLOM KANAN: PRATINJAU (PREVIEW SURAT JALAN) -->
         <div class="lg:col-span-7 flex justify-center">
-            <!-- Bingkai luar/border luar telah dihapus agar bersih -->
             <div id="surat-jalan-container" class="bg-white w-[210mm] h-[282mm] p-4 shadow-xl flex flex-col justify-between text-black box-border">
                 
                 <!-- Bagian Atas: Header & Judul -->
@@ -346,12 +345,12 @@
             });
         }
 
-        // Fungsi Download PDF Pas 1 Halaman
+        // Fungsi Download PDF dengan Margin Seimbang agar Pas di Tengah
         function downloadPDF() {
             const element = document.getElementById('surat-jalan-container');
             const noPesanan = inputNoPesanan.value || 'SuratJalan';
             const opt = {
-                margin:       0,
+                margin:       5, // Memberikan margin seimbang di setiap sisi agar posisi otomatis di tengah
                 filename:     `SuratJalan_${noPesanan}.pdf`,
                 image:        { type: 'jpeg', quality: 0.98 },
                 html2canvas:  { scale: 2, useCORS: true, allowTaint: true },
@@ -367,7 +366,7 @@
             const element = document.getElementById('surat-jalan-container');
             const noPesanan = inputNoPesanan.value || 'SuratJalan';
             const opt = {
-                margin:       0,
+                margin:       5,
                 filename:     `SuratJalan_${noPesanan}.png`,
                 image:        { type: 'jpeg', quality: 0.98 },
                 html2canvas:  { scale: 2, useCORS: true, allowTaint: true },
