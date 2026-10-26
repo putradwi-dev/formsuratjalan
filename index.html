@@ -112,18 +112,18 @@
 
         <!-- KOLOM KANAN: PRATINJAU (PREVIEW SURAT JALAN) -->
         <div class="lg:col-span-7 flex justify-center">
-            <!-- Padding disesuaikan jadi p-5 agar pas 1 halaman penuh A4 -->
-            <div id="surat-jalan-container" class="bg-white w-[210mm] h-[297mm] p-5 shadow-xl rounded-lg border border-slate-300 flex flex-col justify-between text-black box-border">
+            <!-- Tinggi disesuaikan ke h-[282mm] dan padding p-4 agar pas 1 halaman A4 -->
+            <div id="surat-jalan-container" class="bg-white w-[210mm] h-[282mm] p-4 shadow-xl rounded-lg border border-slate-300 flex flex-col justify-between text-black box-border">
                 
                 <!-- Bagian Atas: Header & Judul -->
                 <div>
                     <table class="w-full border-collapse border border-black mb-0">
                         <tr>
                             <!-- Logo & Info Perusahaan -->
-                            <td class="w-1/2 border border-black p-2.5 text-center align-middle">
+                            <td class="w-1/2 border border-black p-2 text-center align-middle">
                                 <div class="flex flex-col items-center justify-center">
-                                    <img src="Picture1.png" alt="Logo PT. MBP" class="h-11 object-contain mb-1">
-                                    <div class="text-[9px] text-slate-800 leading-tight text-center">
+                                    <img src="Picture1.png" alt="Logo PT. MBP" class="h-10 object-contain mb-1">
+                                    <div class="text-[8.5px] text-slate-800 leading-tight text-center">
                                         Ruko permata Medang Blok I-10,<br>
                                         Kel. Medang, Kec. Pagedangan,<br>
                                         Kab. Tangerang Banten, Indonesia
@@ -131,7 +131,7 @@
                                 </div>
                             </td>
                             <!-- Judul Surat Jalan -->
-                            <td class="w-1/2 border border-black p-2.5 text-center align-middle bg-white">
+                            <td class="w-1/2 border border-black p-2 text-center align-middle bg-white">
                                 <h2 class="text-2xl font-black underline tracking-wide">SURAT JALAN</h2>
                             </td>
                         </tr>
@@ -141,7 +141,7 @@
                     <table class="w-full border-collapse border border-black border-t-0">
                         <tr>
                             <!-- Alamat Tujuan -->
-                            <td class="w-1/2 border border-black p-2.5 align-top text-sm h-28">
+                            <td class="w-1/2 border border-black p-2 align-top text-sm h-24">
                                 <span class="font-bold block mb-1 text-xs">ALAMAT TUJUAN :</span>
                                 <div id="prevAlamat" class="whitespace-pre-line font-medium text-base"></div>
                             </td>
@@ -149,21 +149,21 @@
                             <td class="w-1/2 border border-black p-0 align-top">
                                 <table class="w-full h-full border-collapse">
                                     <tr class="border-b border-black">
-                                        <td class="w-1/2 border-r border-black p-2.5 align-top text-sm">
+                                        <td class="w-1/2 border-r border-black p-2 align-top text-sm">
                                             <span class="font-bold block text-xs text-slate-600">TANGGAL</span>
                                             <span id="prevTanggal" class="font-bold text-base">27/10/2026</span>
                                         </td>
-                                        <td class="w-1/2 p-2.5 align-top text-sm">
+                                        <td class="w-1/2 p-2 align-top text-sm">
                                             <span class="font-bold block text-xs text-slate-600">NOMOR PESANAN</span>
                                             <span id="prevNoPesanan" class="font-bold text-sm">261026MJ0K7D6G</span>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="w-1/2 border-r border-black p-2.5 align-top text-sm">
+                                        <td class="w-1/2 border-r border-black p-2 align-top text-sm">
                                             <span class="font-bold block text-xs text-slate-600">EKSPEDISI</span>
                                             <span id="prevEkspedisi" class="font-bold text-base">JNE REGULER</span>
                                         </td>
-                                        <td class="w-1/2 p-2.5 align-top text-sm">
+                                        <td class="w-1/2 p-2 align-top text-sm">
                                             <span class="font-bold block text-xs text-slate-600">TOKO</span>
                                             <span id="prevToko" class="font-bold text-base">SHOPE MT</span>
                                         </td>
@@ -174,7 +174,7 @@
                     </table>
 
                     <!-- Spacer tipis pembatas -->
-                    <div class="h-3"></div>
+                    <div class="h-2"></div>
 
                     <!-- Tabel Item Barang -->
                     <table class="w-full border-collapse border border-black">
@@ -193,15 +193,15 @@
                 </div>
 
                 <!-- Bagian Bawah: Tanda Tangan -->
-                <div class="mt-2">
+                <div class="mt-1">
                     <table class="w-full border-collapse border border-black">
                         <tr>
                             <!-- Hormat Kami -->
-                            <td class="w-1/2 border border-black p-2 align-top text-center h-32 relative">
-                                <div class="text-sm font-semibold text-slate-800 mb-1">Hormat Kami,</div>
+                            <td class="w-1/2 border border-black p-2 align-top text-center h-28 relative">
+                                <div class="text-sm font-semibold text-slate-800 mb-0.5">Hormat Kami,</div>
                                 <!-- Stempel & Tanda Tangan Asli -->
-                                <div class="absolute inset-x-0 top-8 flex justify-center items-center pointer-events-none">
-                                    <img src="Picture2.jpg" alt="Stempel & TTD" class="h-14 object-contain">
+                                <div class="absolute inset-x-0 top-7 flex justify-center items-center pointer-events-none">
+                                    <img src="Picture2.jpg" alt="Stempel & TTD" class="h-12 object-contain">
                                 </div>
                                 <div class="absolute bottom-2 inset-x-0 flex justify-center items-center gap-4 text-sm pl-6">
                                     <div class="border-b border-black w-36 pb-1"></div>
@@ -209,8 +209,8 @@
                                 </div>
                             </td>
                             <!-- Penerima -->
-                            <td class="w-1/2 border border-black p-2 align-top text-center h-32 relative">
-                                <div class="text-sm font-semibold text-slate-800 mb-1">Penerima,</div>
+                            <td class="w-1/2 border border-black p-2 align-top text-center h-28 relative">
+                                <div class="text-sm font-semibold text-slate-800 mb-0.5">Penerima,</div>
                                 <div class="absolute bottom-2 inset-x-0 flex justify-center items-center gap-4 text-sm pl-6">
                                     <div class="border-b border-black w-36 pb-1"></div>
                                     <span class="font-semibold">Tgl.</span>
@@ -269,12 +269,12 @@
                 if(nama || qty || packing) {
                     filledCount++;
                     htmlContent += `
-                        <tr class="h-8">
-                            <td class="border border-black px-2 py-1 text-center align-middle">${nama}</td>
-                            <td class="border border-black px-2 py-1 text-center align-middle">${qty}</td>
-                            <td class="border border-black px-2 py-1 text-center align-middle">${packing}</td>
-                            <td class="border border-black px-2 py-1 text-center align-middle">
-                                <div class="w-4 h-4 border border-black mx-auto"></div>
+                        <tr class="h-7">
+                            <td class="border border-black px-2 py-0.5 text-center align-middle">${nama}</td>
+                            <td class="border border-black px-2 py-0.5 text-center align-middle">${qty}</td>
+                            <td class="border border-black px-2 py-0.5 text-center align-middle">${packing}</td>
+                            <td class="border border-black px-2 py-0.5 text-center align-middle">
+                                <div class="w-3.5 h-3.5 border border-black mx-auto"></div>
                             </td>
                         </tr>
                     `;
@@ -284,12 +284,12 @@
             const totalRowToShow = Math.max(5, filledCount);
             for(let i = filledCount; i < totalRowToShow; i++) {
                 htmlContent += `
-                    <tr class="h-8">
-                        <td class="border border-black px-2 py-1 text-center align-middle">&nbsp;</td>
-                        <td class="border border-black px-2 py-1 text-center align-middle">&nbsp;</td>
-                        <td class="border border-black px-2 py-1 text-center align-middle">&nbsp;</td>
-                        <td class="border border-black px-2 py-1 text-center align-middle">
-                            <div class="w-4 h-4 border border-black mx-auto"></div>
+                    <tr class="h-7">
+                        <td class="border border-black px-2 py-0.5 text-center align-middle">&nbsp;</td>
+                        <td class="border border-black px-2 py-0.5 text-center align-middle">&nbsp;</td>
+                        <td class="border border-black px-2 py-0.5 text-center align-middle">&nbsp;</td>
+                        <td class="border border-black px-2 py-0.5 text-center align-middle">
+                            <div class="w-3.5 h-3.5 border border-black mx-auto"></div>
                         </td>
                     </tr>
                 `;
@@ -346,7 +346,7 @@
             });
         }
 
-        // Fungsi Download PDF 1 Halaman Pas
+        // Fungsi Download PDF Pas 1 Halaman
         function downloadPDF() {
             const element = document.getElementById('surat-jalan-container');
             const noPesanan = inputNoPesanan.value || 'SuratJalan';
