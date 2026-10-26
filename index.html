@@ -198,7 +198,7 @@
                             <!-- Hormat Kami -->
                             <td class="w-1/2 border border-black p-2.5 align-top text-center h-28 relative">
                                 <div class="text-sm font-semibold text-slate-900 mb-0.5">Hormat Kami,</div>
-                                <!-- Stempel & Tanda Tangan Asli (Diperbesar ke h-16) -->
+                                <!-- Stempel & Tanda Tangan Asli -->
                                 <div class="absolute inset-x-0 top-5 flex justify-center items-center pointer-events-none">
                                     <img src="Picture2.jpg" alt="Stempel & TTD" class="h-16 object-contain">
                                 </div>
@@ -345,13 +345,13 @@
             });
         }
 
-        // Fungsi Download PDF dengan Margin Simetris 8mm agar Pas di Tengah
+        // Fungsi Download PDF dengan Format Nama: [NomorPesanan] sj.pdf
         function downloadPDF() {
             const element = document.getElementById('surat-jalan-container');
-            const noPesanan = inputNoPesanan.value || 'SuratJalan';
+            const noPesanan = inputNoPesanan.value.trim() || 'SuratJalan';
             const opt = {
                 margin:       8,
-                filename:     `SuratJalan_${noPesanan}.pdf`,
+                filename:     `${noPesanan} sj.pdf`,
                 image:        { type: 'jpeg', quality: 0.98 },
                 html2canvas:  { scale: 2, useCORS: true, allowTaint: true },
                 jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
@@ -361,13 +361,13 @@
             });
         }
 
-        // Fungsi Download Gambar
+        // Fungsi Download Gambar dengan Format Nama: [NomorPesanan] sj.png
         function downloadImage() {
             const element = document.getElementById('surat-jalan-container');
-            const noPesanan = inputNoPesanan.value || 'SuratJalan';
+            const noPesanan = inputNoPesanan.value.trim() || 'SuratJalan';
             const opt = {
                 margin:       8,
-                filename:     `SuratJalan_${noPesanan}.png`,
+                filename:     `${noPesanan} sj.png`,
                 image:        { type: 'jpeg', quality: 0.98 },
                 html2canvas:  { scale: 2, useCORS: true, allowTaint: true },
                 jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
@@ -378,7 +378,7 @@
                     const imageURL = canvas.toDataURL('image/png');
                     const link = document.createElement('a');
                     link.href = imageURL;
-                    link.download = `SuratJalan_${noPesanan}.png`;
+                    link.download = `${noPesanan} sj.png`;
                     link.click();
                 }).catch(err => {
                     alert("Gagal merender gambar canvas: " + err);
