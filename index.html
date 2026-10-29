@@ -81,7 +81,7 @@
                     <!-- Baris Item 1 -->
                     <div class="item-input-row grid grid-cols-12 gap-2 bg-slate-50 p-3 rounded-lg border">
                         <div class="col-span-6">
-                            <input type="text" placeholder="Nama Barang" class="nama-barang w-full border border-slate-300 rounded p-1.5 text-xs" value="TOPAZ 750">
+                            <input type="text" placeholder="Nama Barang" class="nama-barang w-full border border-slate-300 rounded p-1.5 text-xs" value="">
                         </div>
                         <div class="col-span-2">
                             <input type="text" placeholder="Qty" class="qty-barang w-full border border-slate-300 rounded p-1.5 text-xs text-center" value="1">
@@ -103,10 +103,10 @@
             <!-- Tombol Aksi Langsung Simpan -->
             <div class="pt-4 border-t grid grid-cols-2 gap-3">
                 <button onclick="downloadPDF()" class="bg-emerald-600 text-white py-2.5 px-3 rounded-lg font-semibold hover:bg-emerald-700 shadow transition flex items-center justify-center gap-2 text-sm">
-                    📥 Simpan PDF
+                    Simpan PDF
                 </button>
                 <button onclick="downloadImage()" class="bg-blue-600 text-white py-2.5 px-3 rounded-lg font-semibold hover:bg-blue-700 shadow transition flex items-center justify-center gap-2 text-sm">
-                    🖼️ Simpan Gambar
+                    Simpan Gambar
                 </button>
             </div>
         </div>
@@ -123,7 +123,7 @@
                             <td class="w-1/2 border border-black p-3 text-center align-middle">
                                 <div class="flex flex-col items-center justify-center">
                                     <img src="Picture1.png" alt="Logo PT. MBP" class="h-14 object-contain mb-1.5">
-                                    <div class="text-[10.5px] text-slate-900 font-medium leading-tight text-center">
+                                    <div class="text-[12px] text-slate-900 font-medium leading-tight text-center">
                                         Ruko permata Medang Blok I-10,<br>
                                         Kel. Medang, Kec. Pagedangan,<br>
                                         Kab. Tangerang Banten, Indonesia
@@ -142,7 +142,7 @@
                         <tr>
                             <!-- Alamat Tujuan -->
                             <td class="w-1/2 border border-black p-3 align-top text-sm h-28">
-                                <span class="font-bold block mb-1 text-xs tracking-wider">ALAMAT TUJUAN :</span>
+                                <span class="font-bold block mb-1 text-s tracking-wider">ALAMAT TUJUAN :</span>
                                 <div id="prevAlamat" class="whitespace-pre-line font-bold text-base"></div>
                             </td>
                             <!-- Kotak Meta (Proporsi 50:50) -->
@@ -155,7 +155,7 @@
                                         </td>
                                         <td class="w-1/2 p-2.5 align-top">
                                             <span class="font-bold block text-xs text-slate-700">NOMOR PESANAN</span>
-                                            <span id="prevNoPesanan" class="font-bold text-sm whitespace-nowrap">261026MJ0K7D6G</span>
+                                            <span id="prevNoPesanan" class="font-bold text-s whitespace-nowrap">261026MJ0K7D6G</span>
                                         </td>
                                     </tr>
                                     <tr>
@@ -179,7 +179,7 @@
                     <!-- Tabel Item Barang -->
                     <table class="w-full border-collapse border border-black">
                         <thead>
-                            <tr class="bg-slate-200 text-center text-xs">
+                            <tr class="bg-slate-200 text-center text-s">
                                 <th class="border border-black p-1.5 w-[45%] font-bold">NAMA BARANG</th>
                                 <th class="border border-black p-1.5 w-[15%] font-bold">QTY.</th>
                                 <th class="border border-black p-1.5 w-[25%] font-bold">PACKING</th>
